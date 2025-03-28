@@ -1,3 +1,7 @@
+function closeMenu() {
+  document.getElementById('check').checked = false;
+}
+
 var scrolBtn = document.querySelector("#myDIV");
 window.addEventListener("scroll", function () {
   let offset;
@@ -29,4 +33,12 @@ window.addEventListener("scroll", () => {
   } else {
     toTop.classList.remove("active");
   }
+});
+
+toTop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
