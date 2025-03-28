@@ -5,10 +5,12 @@
 .responsive-cell-block {
   min-height: 75px;
 }
+
 button a{
   text-decoration: none;
   color:whitesmoke;
-  
+  font-size: 1rem;  
+  font-family: "Raleway", sans-serif;
 }
 button{
   border-radius: 10%;
@@ -16,8 +18,37 @@ button{
   height:40px;
   background-color: rgb(33, 30, 30);
   margin-bottom: 50px;
-  margin-right: 20px;
+  transition: transform 0.7s ease;
+  /* margin-right: 20px; */
 }
+
+button:hover{
+  transform: translate(-5%,-5%)
+}
+
+.buttons{
+  /* background: red; */
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width : 1024px){
+  .buttons{
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width : 528px){
+  .buttons{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
 .responsive-container-block {
   min-height: 75px;
   height: fit-content;
